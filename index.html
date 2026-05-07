@@ -3,71 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Práctica de Diseño</title>
+    <title>Tailwind Labs - Inicio</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <h1>Mi Sitio Web</h1>
-      <nav class="nav">
-        <a href="#">Inicio</a>
-        <a href="#">Servicios</a>
-        <a href="#">Contacto</a>
-      </nav>
+  <body class="site-body">
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a class="brand" href="./index.html">Tailwind Labs</a>
+        <nav id="menu-principal" class="site-nav">
+          <a href="./index.html">Inicio</a>
+          <a href="./pages/about.html">Sobre el curso</a>
+          <a href="./pages/faq.html">Preguntas frecuentes</a>
+          <a href="./pages/privacy.html">Privacidad</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <h2>Bienvenidos a mi sitio</h2>
-      <p>Explora los servicios que ofrecemos.</p>
-      <button class="primary-btn">Saber Más</button>
-    </section>
-
-    <!-- Main Content -->
-    <main>
-      <section class="cards">
-        <div class="card">
-          <h3>Servicio 1</h3>
-          <p>Descripción del servicio 1.</p>
-        </div>
-        <div class="card">
-          <h3>Servicio 2</h3>
-          <p>Descripción del servicio 2.</p>
-        </div>
-        <div class="card">
-          <h3>Servicio 3</h3>
-          <p>Descripción del servicio 3.</p>
+    <main class="site-main">
+      <section class="hero">
+        <div class="container">
+          <span class="hero-tag">Programacion II</span>
+          <h1>Practica guiada de Tailwind CSS</h1>
+          <p>
+            Esta pagina te sirve como laboratorio para aplicar utilidades de espaciado, flex, grid,
+            responsive, tipografia y estados interactivos.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#servicios-grid">
+              Ver bloques practicos
+            </a>
+            <a class="btn btn-secondary" href="./pages/faq.html">
+              Ir a FAQ
+            </a>
+          </div>
         </div>
       </section>
 
-      <!-- Articles Section -->
-      <section class="articles">
-        <h2>Últimos Artículos</h2>
-        <article>
-          <h3>Cómo mejorar tu productividad</h3>
-          <p>Descubre consejos útiles para ser más productivo.</p>
-        </article>
-        <article>
-          <h3>Tecnologías emergentes</h3>
-          <p>Una mirada a las tecnologías que cambiarán el futuro.</p>
-        </article>
+      <section class="container section">
+        <h2>Objetivos de esta ejercitacion</h2>
+        <p class="section-intro">
+          Cada tarjeta esta pensada para que practiques un conjunto de utilidades y aprendas a combinarlas.
+        </p>
+        <div id="servicios-grid" class="cards-grid">
+          <article class="card">
+            <h3>Utilidades de layout</h3>
+            <p>
+              Aplicar contenedores, columnas, gap, alineaciones y distribucion responsive.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Tipografia y color</h3>
+            <p>
+              Definir jerarquia visual con tamaños, pesos, tracking, contraste y fondos.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Estados e interacciones</h3>
+            <p>
+              Mejorar experiencia con hover, focus, transiciones y microinteracciones.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section section-last">
+        <div class="highlight-box">
+          <h2>Siguiente paso</h2>
+          <p>
+            Continua con las paginas secundarias para practicar variantes responsive, listas,
+            bloques informativos y consistencia visual en un mini sitio multipagina.
+          </p>
+        </div>
       </section>
     </main>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h3>Información Adicional</h3>
-      <ul>
-        <li><a href="#">Acerca de nosotros</a></li>
-        <li><a href="#">Preguntas Frecuentes</a></li>
-        <li><a href="#">Política de Privacidad</a></li>
-      </ul>
-    </aside>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2025 Mi Sitio Web</p>
+    <footer class="site-footer">
+      <div class="container footer-wrapper">
+        <p>Programacion II - Ejercitacion Tailwind CSS</p>
+        <p>Comision 2026</p>
+        <p class="student-signature">Desarrollado por [Nombre y Apellido]</p>
+      </div>
     </footer>
   </body>
 </html>
